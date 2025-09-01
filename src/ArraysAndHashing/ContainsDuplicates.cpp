@@ -1,6 +1,3 @@
-//
-// Created by abhis on 31-08-2025.
-//
 #include <iostream>
 #include <unordered_set>
 #include <vector>

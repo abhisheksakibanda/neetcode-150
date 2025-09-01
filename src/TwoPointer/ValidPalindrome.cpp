@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "../utils/PrettyPrinter.h"
+
 using namespace std;
 
 class Solution {
@@ -38,8 +40,9 @@ int main() {
     };
 
     for (int i = 0; i < testCases.size(); ++i) {
+        auto& testCase = testCases[i];
         bool result = Solution::isPalindrome(testCases[i]);
-        cout << i + 1 << ": " << (result ? "true" : "false") << endl;
+        cout << i + 1 << ": " << PrintElement(testCase) << " -> " << (result ? "true" : "false") << endl;
     }
     return 0;
 }

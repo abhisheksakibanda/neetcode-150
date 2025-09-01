@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 
+#include "../utils/PrettyPrinter.h"
+
 using namespace std;
 
 class Solution {
@@ -67,7 +69,7 @@ int main() {
                 board[r][c] = testCases[i][r][c][0];
 
         bool result = Solution::isValidSudoku(board);
-        cout << i + 1 << ": " << (result ? "true" : "false") << endl;
+        cout << i + 1 << ": " << PrintContainer(board) << " -> " << (result ? "true" : "false") << endl;
     }
     return 0;
 }

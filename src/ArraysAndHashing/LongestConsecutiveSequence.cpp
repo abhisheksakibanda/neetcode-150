@@ -5,6 +5,8 @@
 #include <vector>
 #include <unordered_set>
 
+#include "../utils/PrettyPrinter.h"
+
 using namespace std;
 
 class Solution {
@@ -39,7 +41,9 @@ int main() {
     };
 
     for (int i = 0; i < testCases.size(); ++i) {
-        cout << i + 1 << ": " << Solution::longestConsecutive(testCases[i]) << endl;
+        vector<int> testCase = testCases[i];
+        auto result = Solution::longestConsecutive(testCase);
+        cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
     return 0;
 }

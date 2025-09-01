@@ -6,6 +6,8 @@
 #include <unordered_map>
 #include <utility>
 
+#include "../utils/PrettyPrinter.h"
+
 using namespace std;
 
 class Solution {
@@ -34,10 +36,7 @@ int main() {
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
         vector<int> result = Solution::twoSum(testCase.first, testCase.second);
-        cout << i + 1 << ": " << "[ ";
-        for (auto& num : result)
-            cout << num << " ";
-        cout << "]" << endl;
+        cout << i + 1 << ": " << PrintElement(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;
 }

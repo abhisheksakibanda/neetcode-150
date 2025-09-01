@@ -4,6 +4,7 @@
 #include <iostream>
 #include <unordered_set>
 #include <vector>
+#include "../utils/PrettyPrinter.h"
 
 using namespace std;
 
@@ -29,7 +30,9 @@ int main() {
     };
 
     for (int i = 0; i < testCases.size(); ++i) {
-        cout << i + 1 << ": " << (Solution::containsDuplicate(testCases[i]) ? "true" : "false") << endl;
+        cout << i + 1 << ": " << PrintContainer(testCases[i]) << " -> " << (Solution::containsDuplicate(testCases[i])
+                                                                                     ? "true"
+                                                                                     : "false") << endl;
     }
     return 0;
 }

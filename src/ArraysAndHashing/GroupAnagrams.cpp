@@ -6,6 +6,7 @@
 #include <string>
 #include <unordered_map>
 #include <array>
+#include "../utils/PrettyPrinter.h"
 
 using namespace std;
 
@@ -44,14 +45,7 @@ int main() {
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
         vector result = Solution::groupAnagrams(testCase);
-        cout << i + 1 << ": " << "[ ";
-        for (auto& res : result) {
-            cout << "[ ";
-            for (auto& word : res)
-                cout << "\"" << word << "\" ";
-            cout << "] ";
-        }
-        cout << "]" << endl;
+        cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;
 }

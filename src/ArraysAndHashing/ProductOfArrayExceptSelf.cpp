@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <vector>
+#include "../utils/PrettyPrinter.h"
 
 using namespace std;
 
@@ -35,11 +36,9 @@ public:
 int main() {
     vector<vector<int>> testCases = {{1, 2, 3, 4}, {-1, 1, 0, -3, 3}};
     for (int i = 0; i < testCases.size(); ++i) {
-        vector<int> result = Solution::productExceptSelf(testCases[i]);
-        cout << i + 1 << ": " << "[ ";
-        for (auto& num : result)
-            cout << num << " ";
-        cout << "]" << endl;
+        auto testCase = testCases[i];
+        vector<int> result = Solution::productExceptSelf(testCase);
+        cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;
 }

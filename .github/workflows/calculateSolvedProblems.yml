@@ -1,0 +1,35 @@
+name: Calculate Solved Problems
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  calculate-solved-problems:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Calculate solved problems and update README
+        run: |
+          # Count the number of files in src excluding utils and WarmUp directories
+          SOLVED_PROBLEMS=$(find src -type f ! -path "*/utils/*" ! -path "*/WarmUp/*" | wc -l)
+
+          # Update the README.md file
+          grep -q "Total Solved Problems:" README.md \
+          && sed -i "s/Total Solved Problems: [0-9]\+/Total Solved Problems: $SOLVED_PROBLEMS/" README.md \
+          || echo "Total Solved Problems: $SOLVED_PROBLEMS" >> README.md
+
+          echo "Updated README.md with Total Solved Problems: $SOLVED_PROBLEMS"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@github.com"
+
+          git add README.md
+          git commit -m "Update total solved problems count" || echo "No changes to commit"
+          git push

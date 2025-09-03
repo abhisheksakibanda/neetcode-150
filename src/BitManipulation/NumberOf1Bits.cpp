@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <bitset>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution {

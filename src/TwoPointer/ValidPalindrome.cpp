@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 #include "../utils/PrettyPrinter.h"
 
 using namespace std;

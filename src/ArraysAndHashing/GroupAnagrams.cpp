@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <array>
+#include <bits/stdc++.h>
 #include "../utils/PrettyPrinter.h"
 
 using namespace std;

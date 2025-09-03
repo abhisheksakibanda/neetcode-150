@@ -1,6 +1,4 @@
-#include <iostream>
-#include <unordered_set>
-#include <vector>
+#include <bits/stdc++.h>
 #include "../utils/PrettyPrinter.h"
 
 using namespace std;

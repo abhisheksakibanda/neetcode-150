@@ -1,3 +1,5 @@
+// 167. Two Sum II - Input Array Is Sorted (https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
+
 #include <bits/stdc++.h>
 #include "../utils/PrettyPrinter.h"
 
@@ -6,13 +8,16 @@ using namespace std;
 class Solution {
 public:
     static vector<int> twoSum(vector<int>& numbers, int target) {
-        map<int, int> freqMap;
+        int left = 0, right = numbers.size() - 1;
 
-        for (int i = 0; i < numbers.size(); ++i) {
-            int complement = target - numbers[i];
-            if (freqMap.count(complement))
-                return {freqMap[complement], i + 1};
-            freqMap[numbers[i]] = i + 1;
+        while (left < right) {
+            int sum = numbers[left] + numbers[right];
+            if (sum == target)
+                return {left + 1, right + 1};
+            if (target > sum)
+                left++;
+            else if (target < sum)
+                right--;
         }
         return {};
     }
@@ -20,6 +25,7 @@ public:
 
 int main() {
     vector testCases = {
+        make_pair<vector<int>, int>({0, 0, 3, 4}, 0),
         make_pair<vector<int>, int>({2, 7, 11, 15}, 9),
         make_pair<vector<int>, int>({2, 3, 4}, 6),
         make_pair<vector<int>, int>({-1, 0}, -1),

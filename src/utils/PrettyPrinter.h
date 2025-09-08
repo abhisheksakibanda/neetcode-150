@@ -3,7 +3,6 @@
 #include <string>
 #include <sstream>
 #include <type_traits>
-#include <iterator>
 #include <utility>
 
 // Trait to detect containers (has begin() and end()), excluding std::string

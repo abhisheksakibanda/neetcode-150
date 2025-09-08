@@ -14,9 +14,9 @@ public:
             int sum = numbers[left] + numbers[right];
             if (sum == target)
                 return {left + 1, right + 1};
-            if (target > sum)
+            if (sum < target)
                 left++;
-            else if (target < sum)
+            else if (sum > target)
                 right--;
         }
         return {};
@@ -25,6 +25,7 @@ public:
 
 int main() {
     vector testCases = {
+        make_pair<vector<int>, int>({1, 3, 4, 6, 8, 10, 13}, 13),
         make_pair<vector<int>, int>({0, 0, 3, 4}, 0),
         make_pair<vector<int>, int>({2, 7, 11, 15}, 9),
         make_pair<vector<int>, int>({2, 3, 4}, 6),

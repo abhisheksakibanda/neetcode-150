@@ -5,14 +5,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(leetcode_practice)
 
-file(GLOB_RECURSE SRC_FILES src/*/*.cpp)
+file(GLOB_RECURSE UTILS_SOURCES src/utils/*.cpp)
+add_library(utils ${UTILS_SOURCES})
 
-foreach (demo ${SRC_FILES})
-    get_filename_component(folder ${demo} DIRECTORY)
-    get_filename_component(folder_name ${folder} NAME)
+file(GLOB_RECURSE PROBLEM_SOURCES src/*/*.cpp)
+list(FILTER PROBLEM_SOURCES EXCLUDE REGEX ".*/utils/.*")
+
+foreach (demo ${PROBLEM_SOURCES})
     get_filename_component(file_name_we ${demo} NAME_WE)
-    set(target_name ${file_name_we})
 
-    # Add CodeDemo.cpp and all helper files to the target
-    add_executable(${target_name} ${demo})
+    add_executable(${file_name_we} ${demo})
+    target_link_libraries(${file_name_we} PRIVATE utils)
 endforeach ()

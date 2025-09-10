@@ -1,7 +1,7 @@
 // 75. Sort Colors (http://leetcode.com/problems/sort-colors)
 
 #include<bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "../../utils/PrettyPrinter.h"
 
 using namespace std;
 

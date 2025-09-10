@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> result;
         sort(nums.begin(), nums.end()); // O(n log n)
 
@@ -52,7 +52,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         vector<int>& testCase = testCases[i];
-        vector<vector<int>> result = Solution::threeSum(testCase);
+        vector<vector<int>> result = Solution().threeSum(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintContainer(result) << endl;
     }
 

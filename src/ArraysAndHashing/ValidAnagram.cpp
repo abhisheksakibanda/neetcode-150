@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static bool isAnagram(string s, string t) {
+    bool isAnagram(string s, string t) {
         if (s.length() != t.length())
             return false;
 
@@ -33,7 +33,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        bool result = Solution::isAnagram(testCase.first, testCase.second);
+        bool result = Solution().isAnagram(testCase.first, testCase.second);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << (result ? "true" : "false") << endl;
     }
     return 0;

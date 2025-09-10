@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static bool isValidSudoku(vector<vector<char>>& board) {
+    bool isValidSudoku(vector<vector<char>>& board) {
         int rows[9][9] = {0};
         int cols[9][9] = {0};
         int boxes[9][9] = {0};
@@ -64,7 +64,7 @@ int main() {
             for (int c = 0; c < 9; ++c)
                 board[r][c] = testCases[i][r][c][0];
 
-        bool result = Solution::isValidSudoku(board);
+        bool result = Solution().isValidSudoku(board);
         cout << i + 1 << ": " << PrintContainer(board) << " -> " << (result ? "true" : "false") << endl;
     }
     return 0;

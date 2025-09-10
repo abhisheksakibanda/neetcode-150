@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int longestConsecutive(vector<int>& nums) {
+    int longestConsecutive(vector<int>& nums) {
         if (nums.empty())
             return 0;
         unordered_set<int> s(nums.begin(), nums.end());
@@ -38,7 +38,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         vector<int> testCase = testCases[i];
-        auto result = Solution::longestConsecutive(testCase);
+        auto result = Solution().longestConsecutive(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
     return 0;

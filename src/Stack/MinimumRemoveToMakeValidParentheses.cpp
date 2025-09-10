@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static string minRemoveToMakeValid(string s) {
+    string minRemoveToMakeValid(string s) {
         stack<char> seen;
         string result;
 
@@ -27,17 +27,34 @@ public:
             }
         }
 
-        if (find(result.begin(), result.end(), ')') == result.end()) return "";
-        return result;
+        int open_needed = 0;
+        string out;
+        out.reserve(result.size());
+        for (auto it = result.rbegin(); it != result.rend(); ++it) {
+            char c = *it;
+            if (c == ')') {
+                ++open_needed;
+                out.push_back(c);
+            } else if (c == '(') {
+                if (open_needed > 0) {
+                    --open_needed;
+                    out.push_back(c);
+                }
+            } else {
+                out.push_back(c);
+            }
+        }
+        std::reverse(out.begin(), out.end());
+        return out;
     }
 };
 
 int main() {
-    vector<string> testCases = {"lee(t(c)o)de)", "a)b(c)d", "))(("};
+    vector<string> testCases = {"lee(t(c)o)de)", "a)b(c)d", "))((", "(h(e)ll(o)"};
 
     for (int i = 0; i < testCases.size(); ++i) {
         string& testCase = testCases[i];
-        string result = Solution::minRemoveToMakeValid(testCase);
+        string result = Solution().minRemoveToMakeValid(testCase);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << PrintElement(result) << endl;
     }
 

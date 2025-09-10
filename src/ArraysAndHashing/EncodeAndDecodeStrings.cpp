@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static string encode(vector<string>& strs) {
+    string encode(vector<string>& strs) {
         string result;
 
         for (string& word : strs) {
@@ -16,7 +16,7 @@ public:
         return result;
     }
 
-    static vector<string> decode(string s) {
+    vector<string> decode(string s) {
         vector<string> wordList;
         size_t i = 0;
         while (i < s.size()) {
@@ -38,8 +38,8 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         vector<string> testCase = testCases[i];
-        string encodedResult = Solution::encode(testCase);
-        vector<string> decodedResult = Solution::decode(encodedResult);
+        string encodedResult = Solution().encode(testCase);
+        vector<string> decodedResult = Solution().decode(encodedResult);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << "Encoded: " << encodedResult << "; Decoded: " <<
             PrintContainer(decodedResult) << endl;
     }

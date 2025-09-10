@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int evalRPN(vector<string>& tokens) {
+    int evalRPN(vector<string>& tokens) {
         stack<int> operands;
 
         for (string& token : tokens) {
@@ -39,7 +39,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        int result = Solution::evalRPN(testCase);
+        int result = Solution().evalRPN(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int lengthOfLongestSubstring(string s) {
+    int lengthOfLongestSubstring(string s) {
         int maxLength = 0, i = 0;
         unordered_map<char, int> seen;
 
@@ -27,7 +27,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        int result = Solution::lengthOfLongestSubstring(testCase);
+        int result = Solution().lengthOfLongestSubstring(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
 

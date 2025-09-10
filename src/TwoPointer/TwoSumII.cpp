@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static vector<int> twoSum(vector<int>& numbers, int target) {
+    vector<int> twoSum(vector<int>& numbers, int target) {
         int left = 0, right = numbers.size() - 1;
 
         while (left < right) {
@@ -34,7 +34,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        vector<int> result = Solution::twoSum(testCase.first, testCase.second);
+        vector<int> result = Solution().twoSum(testCase.first, testCase.second);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;

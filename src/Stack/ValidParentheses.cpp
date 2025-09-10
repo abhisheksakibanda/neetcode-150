@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static bool isValid(string s) {
+    bool isValid(string s) {
         stack<char> charStack;
         for (char& c : s) {
             if (c == '(') charStack.push(')');
@@ -27,7 +27,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         string& testCase = testCases[i];
-        const bool result = Solution::isValid(testCase);
+        const bool result = Solution().isValid(testCase);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << (result ? "true" : "false") << endl;
     }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int maxArea(vector<int>& height) {
+    int maxArea(vector<int>& height) {
         int maxVolume = 0;
         int left = 0, right = height.size() - 1;
 
@@ -33,7 +33,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        int result = Solution::maxArea(testCase);
+        int result = Solution().maxArea(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
 

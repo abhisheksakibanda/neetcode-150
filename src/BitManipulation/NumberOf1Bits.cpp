@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int hammingWeight(int n) {
+    int hammingWeight(int n) {
         int hammingWeight = 0;
 
         while (n) {
@@ -23,7 +23,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        int result = Solution::hammingWeight(testCase);
+        int result = Solution().hammingWeight(testCase);
         cout << i + 1 << ": " << testCase << " -> " << result << endl;
     }
 

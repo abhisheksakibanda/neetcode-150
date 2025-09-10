@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static vector<int> productExceptSelf(vector<int>& nums) {
+    vector<int> productExceptSelf(vector<int>& nums) {
         int n = nums.size();
 
         vector<int> result(n);
@@ -35,7 +35,7 @@ int main() {
     vector<vector<int>> testCases = {{1, 2, 3, 4}, {-1, 1, 0, -3, 3}};
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        vector<int> result = Solution::productExceptSelf(testCase);
+        vector<int> result = Solution().productExceptSelf(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;

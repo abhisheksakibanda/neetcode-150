@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static bool containsDuplicate(vector<int>& nums) {
+    bool containsDuplicate(vector<int>& nums) {
         unordered_set<int> seen;
 
         for (int& num : nums) {
@@ -27,7 +27,7 @@ int main() {
     };
 
     for (int i = 0; i < testCases.size(); ++i) {
-        cout << i + 1 << ": " << PrintContainer(testCases[i]) << " -> " << (Solution::containsDuplicate(testCases[i])
+        cout << i + 1 << ": " << PrintContainer(testCases[i]) << " -> " << (Solution().containsDuplicate(testCases[i])
                                                                                      ? "true"
                                                                                      : "false") << endl;
     }

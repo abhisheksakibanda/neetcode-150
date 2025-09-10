@@ -8,7 +8,7 @@ using namespace std;
 
 class Solution {
 public:
-    static ListNode* reverseList(ListNode* head) {
+    ListNode* reverseList(ListNode* head) {
         ListNode* prev = nullptr;
         ListNode* current = head;
 
@@ -31,7 +31,7 @@ int main() {
         vector<int> testCase = testCases[i];
 
         ListNode* head = CreateLinkedList(testCase);
-        ListNode* result = Solution::reverseList(head);
+        ListNode* result = Solution().reverseList(head);
 
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintLinkedList(result) << endl;
     }

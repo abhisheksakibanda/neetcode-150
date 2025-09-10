@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int search(vector<int>& nums, int target) {
+    int search(vector<int>& nums, int target) {
         int left = 0, right = nums.size() - 1;
 
         while (left <= right) {
@@ -33,7 +33,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        int result = Solution::search(testCase.first, testCase.second);
+        int result = Solution().search(testCase.first, testCase.second);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << result << endl;
     }
 

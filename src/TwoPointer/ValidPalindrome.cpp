@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static bool isPalindrome(string s) {
+    bool isPalindrome(string s) {
         int left = 0, right = s.length() - 1;
 
         while (left < right) {
@@ -37,7 +37,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        bool result = Solution::isPalindrome(testCases[i]);
+        bool result = Solution().isPalindrome(testCases[i]);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << (result ? "true" : "false") << endl;
     }
     return 0;

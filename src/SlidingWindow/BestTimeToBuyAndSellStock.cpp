@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static int maxProfit(vector<int>& prices) {
+    int maxProfit(vector<int>& prices) {
         int minPrice = INT_MAX;
         int maxProfit = 0;
 
@@ -21,11 +21,16 @@ public:
 };
 
 int main() {
-    vector<vector<int>> testCases = {{7, 1, 5, 3, 6, 4}, {7, 6, 4, 3, 1}, {1, 2}, {1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9}};
+    vector<vector<int>> testCases = {
+        {7, 1, 5, 3, 6, 4},
+        {7, 6, 4, 3, 1},
+        {1, 2},
+        {1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9}
+    };
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto testCase = testCases[i];
-        int result = Solution::maxProfit(testCase);
+        int result = Solution().maxProfit(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << result << endl;
     }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
         unordered_map<string, vector<string>> countMap;
 
         for (auto& word : strs) {
@@ -39,7 +39,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        vector result = Solution::groupAnagrams(testCase);
+        vector result = Solution().groupAnagrams(testCase);
         cout << i + 1 << ": " << PrintContainer(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;

@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    static vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> seen;
 
         for (int i = 0; i < nums.size(); ++i) {
@@ -30,7 +30,7 @@ int main() {
 
     for (int i = 0; i < testCases.size(); ++i) {
         auto& testCase = testCases[i];
-        vector<int> result = Solution::twoSum(testCase.first, testCase.second);
+        vector<int> result = Solution().twoSum(testCase.first, testCase.second);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << PrintContainer(result) << endl;
     }
     return 0;

@@ -8,15 +8,15 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int maxLength = 0, i = 0;
+        int maxLength = 0, start = 0;
         unordered_map<char, int> seen;
 
-        for (int j = 0; j < s.length(); ++j) {
-            if (seen.find(s[j]) != seen.end()) {
-                i = max(i, seen[s[j]] + 1);
+        for (int end = 0; end < s.length(); ++end) {
+            if (seen.find(s[end]) != seen.end()) {
+                start = max(start, seen[s[end]] + 1);
             }
-            seen[s[j]] = j;
-            maxLength = max(maxLength, j - i + 1);
+            seen[s[end]] = end;
+            maxLength = max(maxLength, end - start + 1);
         }
         return maxLength;
     }

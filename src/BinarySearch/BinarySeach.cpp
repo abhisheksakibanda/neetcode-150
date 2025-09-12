@@ -1,7 +1,7 @@
 // 704. Binary Search (https://leetcode.com/problems/binary-search)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

@@ -1,7 +1,7 @@
 // 74. Search a 2D Matrix (https://leetcode.com/problems/search-a-2d-matrix)
 
 #include<bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

@@ -1,7 +1,7 @@
 // 167. Two Sum II - Input Array Is Sorted (https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

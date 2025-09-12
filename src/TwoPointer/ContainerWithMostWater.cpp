@@ -1,7 +1,7 @@
 // 11. Container With Most Water (https://leetcode.com/problems/container-with-most-water)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

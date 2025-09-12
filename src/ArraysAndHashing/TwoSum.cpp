@@ -1,7 +1,7 @@
 // 1. Two Sum (https://leetcode.com/problems/two-sum/)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

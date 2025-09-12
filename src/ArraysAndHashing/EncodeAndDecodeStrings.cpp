@@ -1,7 +1,7 @@
 // 271. Encode and Decode Strings (https://leetcode.com/problems/encode-and-decode-strings)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

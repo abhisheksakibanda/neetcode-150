@@ -1,7 +1,7 @@
 // 125. Valid Palindrome - (https://leetcode.com/problems/valid-palindrome)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

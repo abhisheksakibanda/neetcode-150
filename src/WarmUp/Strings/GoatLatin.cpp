@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "../../utils/PrettyPrinter.h"
+#include "../PrettyPrinter.h"
 
 using namespace std;
 
@@ -39,7 +39,7 @@ int main() {
     vector<string> testCases = {"I speak Goat Latin", "The quick brown fox jumped over the lazy dog",};
 
     for (int i = 0; i < testCases.size(); ++i) {
-        string testCase = testCases[i];
+        string& testCase = testCases[i];
         string result = Solution().toGoatLatin(testCase);
         cout << i + 1 << ": " << PrintElement(testCase) << " -> " << PrintElement(result) << endl;
     }

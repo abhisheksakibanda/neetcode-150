@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
-#include "../utils/LinkedList/ListNode.h"
+#include "PrettyPrinter.h"
+#include "LinkedList/ListNode.h"
 
 using namespace std;
 

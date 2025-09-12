@@ -1,7 +1,7 @@
 // 238. Product of Array Except Self (https://leetcode.com/problems/product-of-array-except-self)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

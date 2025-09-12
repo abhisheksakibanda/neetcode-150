@@ -1,7 +1,7 @@
 // 49. Group Anagrams (https://leetcode.com/problems/group-anagrams)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

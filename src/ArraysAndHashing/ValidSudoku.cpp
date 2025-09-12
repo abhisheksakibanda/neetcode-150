@@ -1,7 +1,7 @@
 // 36. Valid Sudoku (https://leetcode.com/problems/valid-sudoku)
 
 #include <bits/stdc++.h>
-#include "../utils/PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

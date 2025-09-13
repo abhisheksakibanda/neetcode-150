@@ -1,7 +1,7 @@
 // 283. Move Zeroes (http://leetcode.com/problems/move-zeroes)
 
 #include <bits/stdc++.h>
-#include "../PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

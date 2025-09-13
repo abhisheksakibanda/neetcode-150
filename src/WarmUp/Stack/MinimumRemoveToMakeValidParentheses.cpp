@@ -1,7 +1,7 @@
 // 1249. Minimum Remove to Make Valid Parentheses (https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 
 #include <bits/stdc++.h>
-#include "../PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 

@@ -18,5 +18,5 @@ public:
 
 int main() {
     string str = "interview";
-    Solution()countCharacterFrequency(str);
+    Solution().countCharacterFrequency(str);
 }

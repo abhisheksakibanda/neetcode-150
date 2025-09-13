@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include "../PrettyPrinter.h"
+#include "PrettyPrinter.h"
 
 using namespace std;
 
